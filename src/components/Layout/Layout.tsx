@@ -1,16 +1,16 @@
 import { FC, Suspense } from "react";
-import Header from "../Header/Header";
+import { Header } from "../Header/Header";
 import { Outlet } from "react-router-dom";
-
+import { MainContainer } from "./Layout.styled.tsx";
 const Layout: FC = () => {
   return (
     <>
       <Header />
-      <main>
+      <MainContainer>
         <Suspense fallback={"loading..."}>
           <Outlet />
         </Suspense>
-      </main>
+      </MainContainer>
     </>
   );
 };
