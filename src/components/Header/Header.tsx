@@ -5,7 +5,7 @@ import {
   LinkWrapper,
   StyledLogo,
   StyledNavLink,
-} from "./Header.styled.tsx";
+} from "./Header.styled";
 export const Header: FC = () => {
   return (
     <HeaderContainer>

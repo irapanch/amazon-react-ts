@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AboutPage: FC = () => {
   return (
     <section>
-      <h1>About us</h1>
+      <h2>About us</h2>
       <h3>This application will help you effectively conduct advertising.</h3>
       <h3>
         Let`s{" "}

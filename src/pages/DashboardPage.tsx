@@ -1,11 +1,11 @@
 import { FC } from "react";
-import FilterPanel from "../components/FilterPanel/FilterPanel";
-import { DashboardPanel } from "../components/DashboardPanel/DashboardPanel";
+import FilterPanel from "../components/filterPanel/FilterPanel";
+import { DashboardPanel } from "../components/DashboardPanel";
 
 const DashboardPage: FC = () => {
   return (
     <section>
-      <h1> Welcome to Ads Perfomanse Dashboard! </h1>
+      <h2> Welcome to Ads Perfomanse Dashboard! </h2>
       <FilterPanel />
       <DashboardPanel />
     </section>

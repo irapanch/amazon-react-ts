@@ -1,5 +1,5 @@
 import { FC, Suspense } from "react";
-import { Header } from "../Header/Header";
+import { Header } from "../header/Header.tsx";
 import { Outlet } from "react-router-dom";
 import { MainContainer } from "./Layout.styled.tsx";
 const Layout: FC = () => {
