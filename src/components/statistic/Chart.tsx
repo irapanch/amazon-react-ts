@@ -24,18 +24,18 @@ export const Chart = () =>
       ],
     };
 
-    const boxShadow = {
-      width: "208px",
-      height: "208px",
-      boxShadow: "0px -1px 16px 5px rgba(0,0,0,0.29)",
-      borderRadius: "50%",
-      position: "absolute",
-      top: "46px",
-      left: "46px",
-      fontSize: "18px",
-      paddingTop: "95px",
-      textAlign: "center",
-    };
+    // const boxShadow = {
+    //   width: "208px",
+    //   height: "208px",
+    //   boxShadow: "0px -1px 16px 5px rgba(0,0,0,0.29)",
+    //   borderRadius: "50%",
+    //   position: "absolute",
+    //   top: "46px",
+    //   left: "46px",
+    //   fontSize: "18px",
+    //   paddingTop: "95px",
+    //   textAlign: "center",
+    // };
 
     return (
       <DonutContainer>
