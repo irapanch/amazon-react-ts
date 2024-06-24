@@ -1,6 +1,9 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { FC } from "react";
 import { Doughnut } from "react-chartjs-2";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { selectSources } from "../../redux/selectors";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -11,47 +14,41 @@ export const DonutContainer = styled.div`
   margin-bottom: 32px;
 `;
 
-export const Chart = () =>
-  // { statSummary }
-  {
-    const emptyData = {
-      labels: ["Empty donut!"],
-      datasets: [
-        {
-          data: [1],
-          backgroundColor: ["gray"],
-        },
-      ],
-    };
+export const Chart: FC = () => {
+  const { sources } = useSelector(selectSources);
 
-    // const boxShadow = {
-    //   width: "208px",
-    //   height: "208px",
-    //   boxShadow: "0px -1px 16px 5px rgba(0,0,0,0.29)",
-    //   borderRadius: "50%",
-    //   position: "absolute",
-    //   top: "46px",
-    //   left: "46px",
-    //   fontSize: "18px",
-    //   paddingTop: "95px",
-    //   textAlign: "center",
-    // };
-
-    return (
-      <DonutContainer>
-        <>
-          <Doughnut
-            data={emptyData}
-            redraw={false}
-            options={{ cutout: "70%", plugins: { legend: { display: false } } }}
-          />
-          <span></span>
-          {/* <span style={boxShadow}>
-          {currentCurrency === "EUR" && <p>€ {euro}</p>}
-          {currentCurrency === "USD" && <p>$ {usd}</p>}
-          {currentCurrency === "UAH" && <p>₴ {balance}</p>}
-        </span> */}
-        </>
-      </DonutContainer>
-    );
+  const data = {
+    labels: sources.map((source) => source.name),
+    datasets: [
+      {
+        label: "Spend this month $",
+        data: sources.map((source) => source.spend),
+        backgroundColor: ["grey", "lightgray", "lightblue"],
+        borderColor: ["black"],
+      },
+    ],
   };
+
+  const emptyData = {
+    labels: ["Empty donut!"],
+    datasets: [
+      {
+        data: [1],
+        backgroundColor: ["gray"],
+      },
+    ],
+  };
+
+  return (
+    <DonutContainer>
+      <h3>Spend this month</h3>
+      <>
+        <Doughnut
+          data={data ? data : emptyData}
+          redraw={false}
+          options={{ cutout: "70%", plugins: { legend: { display: false } } }}
+        />
+      </>
+    </DonutContainer>
+  );
+};
