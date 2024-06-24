@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DashboardPage from "./pages/DashboardPage";
-// npm run deploy
+import "./App.css";
 
 const App: FC = () => {
   return (

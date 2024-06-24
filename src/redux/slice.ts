@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Source, fetchSourceThunk } from "./operations";
+import { fetchSourceThunk } from "./operations";
+import { Source } from "../lib/api";
 
 interface SourcesState {
   sources: Source[];

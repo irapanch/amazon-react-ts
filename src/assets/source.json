@@ -1,0 +1,29 @@
+[
+  {
+    "createdAt": "2024-06-21T10:00:00.533Z",
+    "name": "Google Ads",
+    "spend": 3500,
+    "conversion": 302,
+    "session": 4502,
+    "color": "lightgrey",
+    "id": "1"
+  },
+  {
+    "createdAt": "2024-06-21T13:38:25.112Z",
+    "name": "Facebook",
+    "spend": 4500,
+    "conversion": 89,
+    "session": 751,
+    "color": "lightblue",
+    "id": "2"
+  },
+  {
+    "createdAt": "2024-06-22T02:20:23.603Z",
+    "name": "Instagram",
+    "spend": 1300,
+    "conversion": 152,
+    "session": 1025,
+    "color": "grey",
+    "id": "3"
+  }
+]

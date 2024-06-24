@@ -4,14 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectSources } from "../../../redux/selectors";
 import { fetchSourceThunk } from "../../../redux/operations";
 import { AppDispatch } from "../../../redux/store";
-interface Source {
-  name: string;
-  id: string;
-  createdAt: string;
-  spend: number;
-  conversion: number;
-  session: number;
-}
+import { Source } from "../../../lib/api";
+
 export const DataTable: FC = () => {
   const { sources } = useSelector(selectSources);
 
@@ -24,7 +18,9 @@ export const DataTable: FC = () => {
       <thead>
         <tr>
           {sources?.map((source: Source) => (
-            <th key={source.id}>{source.name}</th>
+            <th key={source.id} style={{ backgroundColor: source.color }}>
+              {source.name}
+            </th>
           ))}
         </tr>
       </thead>

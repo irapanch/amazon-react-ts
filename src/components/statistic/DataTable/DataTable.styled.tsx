@@ -6,6 +6,7 @@ export const StyledTable = styled.table`
   border: 2px solid gray;
   max-width: 600px;
   width: 100%;
+  margin-right: 20px;
 
   > tbody > tr > td {
     border: 1px solid #ccc;

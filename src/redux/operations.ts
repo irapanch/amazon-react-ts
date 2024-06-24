@@ -1,21 +1,7 @@
-import {
-  ThunkDispatch,
-  UnknownAction,
-  createAsyncThunk,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosResponse } from "axios";
+import { Source } from "../lib/api";
 
-export interface Source {
-  name: string;
-  id: string;
-  createdAt: string;
-  spend: number;
-  conversion: number;
-  session: number;
-}
-// interface ApiResponse {
-//   data: Source[];
-// }
 const sources = axios.create({
   baseURL: "https://662b9468de35f91de158c264.mockapi.io/",
 });
