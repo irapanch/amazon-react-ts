@@ -19,4 +19,7 @@ export const StyledTable = styled.table`
     border: 1px solid #161616;
     border-collapse: collapse;
   }
+  p {
+    font-size: 14px;
+  }
 `;

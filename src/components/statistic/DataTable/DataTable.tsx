@@ -14,19 +14,12 @@ interface Source {
 }
 export const DataTable: FC = () => {
   const { sources } = useSelector(selectSources);
-  console.log(sources);
 
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     dispatch(fetchSourceThunk());
-    console.log(sources);
   }, [dispatch]);
   return (
-    // <ul>
-    //   {sources.map((source: Source) => (
-    //     <li key={source.id}>{source.name}</li>
-    //   ))}
-    // </ul>
     <StyledTable>
       <thead>
         <tr>
@@ -37,24 +30,44 @@ export const DataTable: FC = () => {
       </thead>
       <tbody>
         <tr>
-          <td>Данные 4</td>
-          <td>Данные 5</td>
-          <td>Данные 6</td>
+          {sources?.map((source: Source) => (
+            <td key={source.id}>
+              ${source.spend} <p>spend this month</p>
+            </td>
+          ))}
         </tr>
         <tr>
-          <td>Данные 7</td>
-          <td>Данные 8</td>
-          <td>Данные 9</td>
+          {sources?.map((source: Source) => (
+            <td key={source.id}>
+              {source.conversion}
+              <p>Conversions</p>
+            </td>
+          ))}
         </tr>
         <tr>
-          <td>Данные 10</td>
-          <td>Данные 11</td>
-          <td>Данные 12</td>
+          {sources?.map((source: Source) => (
+            <td key={source.id}>
+              {" "}
+              ${(source.spend / source.conversion).toFixed(2)}{" "}
+              <p>Cost per conversion</p>
+            </td>
+          ))}
         </tr>
         <tr>
-          <td>Данные 13</td>
-          <td>Данные 14</td>
-          <td>Данные 15</td>
+          {sources?.map((source: Source) => (
+            <td key={source.id}>
+              {source.session}
+              <p>Session</p>
+            </td>
+          ))}
+        </tr>
+        <tr>
+          {sources?.map((source: Source) => (
+            <td key={source.id}>
+              ${(source.spend / source.session).toFixed(2)}{" "}
+              <p>Cost per click</p>
+            </td>
+          ))}
         </tr>
       </tbody>
     </StyledTable>

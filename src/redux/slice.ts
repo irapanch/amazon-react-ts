@@ -6,12 +6,6 @@ interface SourcesState {
   isLoading: boolean;
   error: string | null;
 }
-
-interface SourcesState {
-  sources: Source[];
-  isLoading: boolean;
-  error: string | null;
-}
 const initialState: SourcesState = {
   sources: [],
   isLoading: false,
