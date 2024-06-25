@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchSourceThunk } from "./operations";
 import { Source } from "../lib/api";
 
-interface SourcesState {
+export interface SourcesState {
   sources: Source[];
   isLoading: boolean;
   error: string | null;
@@ -18,10 +18,25 @@ const slice = createSlice({
   reducers: {},
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(fetchSourceThunk.fulfilled, (state, { payload }) => {
-      const sourceArray: Source[] = payload;
-      state.sources = sourceArray;
-    });
+    builder
+      .addCase(fetchSourceThunk.fulfilled, (state, { payload }) => {
+        const sourceArray: Source[] = payload;
+        state.sources = sourceArray;
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addCase(fetchSourceThunk.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchSourceThunk.rejected, (state, { payload }) => {
+        if (typeof payload === "string") {
+          state.error = payload;
+        } else {
+          state.error = null;
+        }
+        state.isLoading = false;
+      });
   },
 });
 
