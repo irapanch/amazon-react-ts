@@ -1,11 +1,28 @@
 # Amazon-react-ts with Backend API
 
-Це репозиторій проекту Amazon-react-ts with Backend API, який надає API [amazon-node-mongodb](https://github.com/irapanch/amazon-node-mongodb) для взаємодії з додатком [amazon-react-ts](https://github.com/irapanch/amazon-react-ts).
+This is a repository of the Amazon-react-ts with Backend API projectwhich provides the API [amazon-node-mongodb](https://github.com/irapanch/amazon-node-mongodb) to interact with the [amazon-react-ts](https://github.com/irapanch/amazon-react-ts).
 
 ![2224](https://github.com/irapanch/amazon-react-ts/assets/117355580/3273da91-0a60-4c10-aea2-fd68bf0a7412)
 
+Website has 4 pages:
 
-Technical test task for React front-end developer (with Java backend skills)
+- Home page - / | Page to welcome
+- About page - /about
+- Dashboard page - /dashboard
+- Not found page | 404 page
+
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev)
+- [Redux Toolkit](https://redux-toolkit.js.org)
+- [styled-components](https://styled-components.com)
+
+Additionally libraries used: axios, chart.js.
+
+# Technical test task
+
+for React front-end developer (with Java backend skills)
 \*The completed task will be checked for the presence of AI. Don't deceive yourself.
 It's important for us to understand your real skills.
 • Objective: Develop a simplified version of a web application. Your task will involve building
