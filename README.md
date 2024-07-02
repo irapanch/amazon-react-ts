@@ -2,6 +2,9 @@
 
 Це репозиторій проекту Amazon-react-ts with Backend API, який надає API [amazon-node-mongodb](https://github.com/irapanch/amazon-node-mongodb) для взаємодії з додатком [amazon-react-ts](https://github.com/irapanch/amazon-react-ts).
 
+![2224](https://github.com/irapanch/amazon-react-ts/assets/117355580/3273da91-0a60-4c10-aea2-fd68bf0a7412)
+
+
 Technical test task for React front-end developer (with Java backend skills)
 \*The completed task will be checked for the presence of AI. Don't deceive yourself.
 It's important for us to understand your real skills.
