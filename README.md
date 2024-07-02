@@ -1,4 +1,4 @@
-# Amazon-react-ts Backend API
+# Amazon-react-ts with Backend API
 
 Це репозиторій проекту Amazon-react-ts with Backend API, який надає API [amazon-node-mongodb](https://github.com/irapanch/amazon-node-mongodb) для взаємодії з додатком [amazon-react-ts](https://github.com/irapanch/amazon-react-ts).
 
