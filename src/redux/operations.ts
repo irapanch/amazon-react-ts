@@ -3,14 +3,14 @@ import axios, { AxiosResponse } from "axios";
 import { Source } from "../lib/api";
 
 const sources = axios.create({
-  baseURL: "https://662b9468de35f91de158c264.mockapi.io/",
+  baseURL: "https://amazon-node-mongodb.onrender.com/api/",
 });
 export const fetchSourceThunk = createAsyncThunk<Source[], void, {}>(
   "fetchSources",
   async (_, thunkAPI: any) => {
     try {
       const res: AxiosResponse<{ data: Source[] }> = await sources.get(
-        "/advertize"
+        "/sources"
       );
       return res.data;
     } catch (error) {
